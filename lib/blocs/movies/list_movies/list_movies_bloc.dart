@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/list_movies/list_movie_event.dart';
-import 'package:flutter_infinite_list/blocs/movies/list_movies/list_movies_state.dart';
-import 'package:flutter_infinite_list/blocs/movies/suggested_movies/suggested_movie_event.dart';
-import 'package:flutter_infinite_list/blocs/movies/suggested_movies/suggested_movies_bloc.dart';
-import 'package:flutter_infinite_list/repository/movie_repository.dart';
+import 'package:pop_movies/blocs/movies/list_movies/list_movie_event.dart';
+import 'package:pop_movies/blocs/movies/list_movies/list_movies_state.dart';
+import 'package:pop_movies/blocs/movies/suggested_movies/suggested_movie_event.dart';
+import 'package:pop_movies/blocs/movies/suggested_movies/suggested_movies_bloc.dart';
+import 'package:pop_movies/repository/movie_repository.dart';
 
 class ListMoviesBloc extends Bloc<ListMoviesEvent, ListMoviesState> {
   final MovieRepository movieRepository;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_infinite_list/blocs/movies/details_movies/details_movies_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/list_movies/list_movies_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/search_movies/search_movies_bloc.dart';
+import 'package:pop_movies/blocs/movies/details_movies/details_movies_bloc.dart';
+import 'package:pop_movies/blocs/movies/list_movies/list_movies_bloc.dart';
+import 'package:pop_movies/blocs/movies/search_movies/search_movies_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_infinite_list/pages/splash_screen.dart';
-import 'package:flutter_infinite_list/repository/movie_repository_impl.dart';
+import 'package:pop_movies/pages/splash_screen.dart';
+import 'package:pop_movies/repository/movie_repository_impl.dart';
 
 void main() {
   runApp(App());

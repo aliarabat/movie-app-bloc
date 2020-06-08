@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/search_movies/search_movie_event.dart';
-import 'package:flutter_infinite_list/blocs/movies/search_movies/search_movies_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/search_movies/search_movies_state.dart';
-import 'package:flutter_infinite_list/model/movie.dart';
+import 'package:pop_movies/blocs/movies/search_movies/search_movie_event.dart';
+import 'package:pop_movies/blocs/movies/search_movies/search_movies_bloc.dart';
+import 'package:pop_movies/blocs/movies/search_movies/search_movies_state.dart';
+import 'package:pop_movies/model/movie.dart';
 
 class SearchDelegatePage extends SearchDelegate<Movie> {
   final String searchFieldLabel;

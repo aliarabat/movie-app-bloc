@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_infinite_list/pages/movies_home.dart';
+import 'package:pop_movies/pages/movies_home.dart';
 
 class SplashScreen extends StatefulWidget {
   SplashScreen({Key key}) : super(key: key);

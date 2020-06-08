@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter_infinite_list/model/movie_detail.dart';
+import 'package:pop_movies/model/movie_detail.dart';
 
 abstract class DetailMoviesState extends Equatable {
   final MovieDetail movieDetail;

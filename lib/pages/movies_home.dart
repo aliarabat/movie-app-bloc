@@ -1,14 +1,14 @@
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_infinite_list/Constants/movies_constants.dart';
-import 'package:flutter_infinite_list/blocs/movies/list_movies/list_movie_event.dart';
-import 'package:flutter_infinite_list/blocs/movies/list_movies/list_movies_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/list_movies/list_movies_state.dart';
-import 'package:flutter_infinite_list/constants/admob_ads_constants.dart';
-import 'package:flutter_infinite_list/model/movie.dart';
-import 'package:flutter_infinite_list/pages/movies_details.dart';
-import 'package:flutter_infinite_list/pages/search_delegate_page.dart';
+import 'package:pop_movies/Constants/movies_constants.dart';
+import 'package:pop_movies/blocs/movies/list_movies/list_movie_event.dart';
+import 'package:pop_movies/blocs/movies/list_movies/list_movies_bloc.dart';
+import 'package:pop_movies/blocs/movies/list_movies/list_movies_state.dart';
+import 'package:pop_movies/constants/admob_ads_constants.dart';
+import 'package:pop_movies/model/movie.dart';
+import 'package:pop_movies/pages/movies_details.dart';
+import 'package:pop_movies/pages/search_delegate_page.dart';
 
 class MoviesHome extends StatefulWidget {
   MoviesHome({Key key}) : super(key: key);
@@ -29,7 +29,7 @@ class _MoviesHomeState extends State<MoviesHome> {
 
   BannerAd createBannerAd() {
     return BannerAd(
-      adUnitId: BannerAd.testAdUnitId,
+      adUnitId: AdmobAdsConstants.bannerAdUnit,
       size: AdSize.banner,
       targetingInfo: AdmobAdsConstants.targetingInfo,
     );
@@ -37,7 +37,7 @@ class _MoviesHomeState extends State<MoviesHome> {
 
   InterstitialAd createInterstitialAd() {
     return InterstitialAd(
-      adUnitId: InterstitialAd.testAdUnitId,
+      adUnitId: AdmobAdsConstants.interstitialAdUnit,
       targetingInfo: AdmobAdsConstants.targetingInfo,
     );
   }
@@ -49,7 +49,7 @@ class _MoviesHomeState extends State<MoviesHome> {
     this.moviesBloc = BlocProvider.of<ListMoviesBloc>(context)
       ..add(FetchMovies(genre: selectedGenre));
     this._scrollController = ScrollController()..addListener(_listener);
-    FirebaseAdMob.instance.initialize(appId: FirebaseAdMob.testAppId);
+    FirebaseAdMob.instance.initialize(appId: AdmobAdsConstants.appAdUnitId);
     _bannerAd = createBannerAd()
       ..load()
       ..show(
@@ -57,17 +57,17 @@ class _MoviesHomeState extends State<MoviesHome> {
         anchorType: AnchorType.bottom,
       );
     this._interstitialAd = createInterstitialAd()..load();
+    RewardedVideoAd.instance.load(
+        adUnitId: AdmobAdsConstants.rewardedAdUnit,
+        targetingInfo: AdmobAdsConstants.targetingInfo);
     RewardedVideoAd.instance.listener =
         (RewardedVideoAdEvent event, {String rewardType, int rewardAmount}) {
       if (event == RewardedVideoAdEvent.closed) {
         RewardedVideoAd.instance.load(
-            adUnitId: RewardedVideoAd.testAdUnitId,
+            adUnitId: AdmobAdsConstants.rewardedAdUnit,
             targetingInfo: AdmobAdsConstants.targetingInfo);
       }
     };
-    RewardedVideoAd.instance.load(
-        adUnitId: RewardedVideoAd.testAdUnitId,
-        targetingInfo: AdmobAdsConstants.targetingInfo);
   }
 
   Drawer startDrawer() {

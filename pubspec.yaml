@@ -1,5 +1,5 @@
-name: flutter_infinite_list
-description: A new Flutter project.
+name: pop_movies
+description: Movies app made with Flutter, it implements the BLoC state management.
 
 version: 1.0.0+1
 

@@ -1,5 +1,5 @@
-import 'package:flutter_infinite_list/model/movie.dart';
-import 'package:flutter_infinite_list/model/movie_detail.dart';
+import 'package:pop_movies/model/movie.dart';
+import 'package:pop_movies/model/movie_detail.dart';
 
 abstract class MovieRepository {
   Future<List<Movie>> getMovies({int limit, int page, String genre});

@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 
-import 'package:flutter_infinite_list/model/cast.dart';
-import 'package:flutter_infinite_list/model/torrent.dart';
+import 'package:pop_movies/model/cast.dart';
+import 'package:pop_movies/model/torrent.dart';
 
 class MovieDetail {
   final int id;

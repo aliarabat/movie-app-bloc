@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
-import 'package:flutter_infinite_list/blocs/movies/suggested_movies/suggested_movies_bloc.dart';
+import 'package:pop_movies/blocs/movies/suggested_movies/suggested_movies_bloc.dart';
 
 @immutable
 abstract class ListMoviesEvent extends Equatable {

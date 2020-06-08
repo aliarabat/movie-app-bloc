@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/search_movies/search_movie_event.dart';
-import 'package:flutter_infinite_list/blocs/movies/search_movies/search_movies_state.dart';
-import 'package:flutter_infinite_list/repository/movie_repository.dart';
+import 'package:pop_movies/blocs/movies/search_movies/search_movie_event.dart';
+import 'package:pop_movies/blocs/movies/search_movies/search_movies_state.dart';
+import 'package:pop_movies/repository/movie_repository.dart';
 
 class SearchMoviesBloc extends Bloc<SearchMoviesEvent, SearchMoviesState> {
   final MovieRepository movieRepository;

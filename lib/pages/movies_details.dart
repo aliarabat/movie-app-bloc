@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/details_movies/details_movie_event.dart';
-import 'package:flutter_infinite_list/blocs/movies/details_movies/details_movies_bloc.dart';
-import 'package:flutter_infinite_list/blocs/movies/details_movies/details_movies_state.dart';
-import 'package:flutter_infinite_list/blocs/movies/list_movies/list_movies_bloc.dart';
-import 'package:flutter_infinite_list/model/cast.dart';
-import 'package:flutter_infinite_list/model/movie.dart';
-import 'package:flutter_infinite_list/model/movie_detail.dart';
+import 'package:pop_movies/blocs/movies/details_movies/details_movie_event.dart';
+import 'package:pop_movies/blocs/movies/details_movies/details_movies_bloc.dart';
+import 'package:pop_movies/blocs/movies/details_movies/details_movies_state.dart';
+import 'package:pop_movies/blocs/movies/list_movies/list_movies_bloc.dart';
+import 'package:pop_movies/model/cast.dart';
+import 'package:pop_movies/model/movie.dart';
+import 'package:pop_movies/model/movie_detail.dart';
 
 class MoviesDetail extends StatefulWidget {
   final Movie movie;

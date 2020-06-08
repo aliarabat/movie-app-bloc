@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter_infinite_list/Constants/movies_urls.dart';
-import 'package:flutter_infinite_list/model/movie.dart';
-import 'package:flutter_infinite_list/model/movie_detail.dart';
-import 'package:flutter_infinite_list/repository/movie_repository.dart';
+import 'package:pop_movies/Constants/movies_urls.dart';
+import 'package:pop_movies/model/movie.dart';
+import 'package:pop_movies/model/movie_detail.dart';
+import 'package:pop_movies/repository/movie_repository.dart';
 import 'package:http/http.dart' as http;
 
 class MovieRepositoryImpl implements MovieRepository {

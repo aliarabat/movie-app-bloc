@@ -1,4 +1,4 @@
-package com.example.flutter_infinite_list
+package com.boxmoviesreview.madewithflutter
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

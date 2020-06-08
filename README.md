@@ -1,4 +1,4 @@
-# flutter_infinite_list
+# Movie Review App made with flutter
 
 A new Flutter project.
 

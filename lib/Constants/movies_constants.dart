@@ -3,8 +3,14 @@ class MoviesConstants {
     'Comedy',
     'Sci-fi',
     'Horror',
+    'Romance',
     'Action',
     'Thriller',
-    'Animation'
+    'Drama',
+    'Mystery',
+    'Crime',
+    'Animation',
+    'Adventure',
+    'Fantasy'
   ];
 }
